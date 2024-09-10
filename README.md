@@ -1,65 +1,83 @@
-[![Multi-Modality](agorabanner.png)](https://discord.com/servers/agora-999382051935506503)
-
-# Python Package Template
+# Omni-Parse
 
 [![Join our Discord](https://img.shields.io/badge/Discord-Join%20our%20server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/agora-999382051935506503) [![Subscribe on YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@kyegomez3242) [![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kye-g-38759a207/) [![Follow on X.com](https://img.shields.io/badge/X.com-Follow-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/kyegomezb)
 
-A easy, reliable, fluid template for python packages complete with docs, testing suites, readme's, github workflows, linting and much much more
+**OmniParse** is an enterprise-grade solution designed to transform unstructured documents into actionable, structured data with precision and reliability. Whether dealing with invoices, contracts, reports, or any other type of unstructured data, OmniParse is your go-to solution for seamless extraction, processing, and integration into your workflows.
 
 
+## Features
+
+- **Enterprise-Grade Precision**: OmniParse is built to handle large-scale document processing needs, ensuring high accuracy in extracting structured data from complex and varied document formats.
+- **Scalable Architecture**: Optimized for deployment in production environments with the capability to handle high volumes of documents and complex workflows.
+- **Customizable Extraction Pipelines**: Easily define and modify extraction rules to fit the unique structure of your documents.
+- **Seamless Integration**: API-ready, OmniParse integrates effortlessly with your existing enterprise systems, ensuring smooth data flow into databases, ERP systems, or custom solutions.
+- **High Performance**: Engineered for speed, OmniParse provides fast data extraction while maintaining a low resource footprint.
+- **Advanced Document Types Support**: Support for PDFs, scanned images, and more, with OCR and natural language processing (NLP) capabilities to enhance data extraction.
+
+## Use Cases
+
+- **Finance**: Extract data from invoices, receipts, and financial reports for automated bookkeeping and reporting.
+- **Legal**: Automate the extraction of key information from contracts, legal agreements, and court documents.
+- **Healthcare**: Convert unstructured medical records into structured formats for easier integration with healthcare systems.
+- **Logistics**: Parse shipment documents, bills of lading, and other transport-related paperwork for supply chain automation.
+  
 ## Installation
 
-You can install the package using pip
+To install **OmniParse**, use the following command:
 
 ```bash
-pip install -e .
+pip install omniparse
 ```
 
-# Usage
+Alternatively, you can clone this repository and install the dependencies manually:
+
+```bash
+git clone https://github.com/The-Swarm-Corporation/OmniParse.git
+cd OmniParse
+pip install -r requirements.txt
+```
+
+## Quickstart
+
+Here’s a simple example to get started with **OmniParse**:
+
 ```python
-print("hello world")
+from omniparse import OmniParser
 
+# Initialize the parser
+parser = OmniParser()
+
+# Load your unstructured document (PDF, image, etc.)
+document = 'path/to/your/document.pdf'
+
+# Extract structured data
+structured_data = parser.extract(document)
+
+# Output the structured data
+print(structured_data)
 ```
 
+## Documentation
 
+For detailed documentation on how to customize your pipelines, configure extraction rules, and integrate **OmniParse** into your enterprise systems, visit the [documentation](https://docs.omniparse.io).
 
-### Code Quality 🧹
+## Roadmap
 
-- `make style` to format the code
-- `make check_code_quality` to check code quality (PEP8 basically)
-- `black .`
-- `ruff . --fix`
+- **Cloud Integration**: Future support for direct cloud integrations with AWS, Azure, and Google Cloud.
+- **Advanced NLP Models**: Incorporating cutting-edge natural language processing for even more accurate data extraction.
+- **Multi-Language Support**: Expanding capabilities to handle documents in multiple languages.
 
-### Tests 🧪
+## Contributing
 
-[`pytests`](https://docs.pytest.org/en/7.1.x/) is used to run our tests.
+We welcome contributions from the open-source community! Please read our [contributing guidelines](CONTRIBUTING.md) before submitting a pull request.
 
-### Publish on PyPi 🚀
+## License
 
-**Important**: Before publishing, edit `__version__` in [src/__init__](/src/__init__.py) to match the wanted new version.
+OmniParse is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-```
-poetry build
-poetry publish
-```
+---
 
-### CI/CD 🤖
-
-We use [GitHub actions](https://github.com/features/actions) to automatically run tests and check code quality when a new PR is done on `main`.
-
-On any pull request, we will check the code quality and tests.
-
-When a new release is created, we will try to push the new code to PyPi. We use [`twine`](https://twine.readthedocs.io/en/stable/) to make our life easier. 
-
-The **correct steps** to create a new realease are the following:
-- edit `__version__` in [src/__init__](/src/__init__.py) to match the wanted new version.
-- create a new [`tag`](https://git-scm.com/docs/git-tag) with the release name, e.g. `git tag v0.0.1 && git push origin v0.0.1` or from the GitHub UI.
-- create a new release from GitHub UI
-
-The CI will run when you create the new release.
-
-# Docs
-We use MK docs. This repo comes with the zeta docs. All the docs configurations are already here along with the readthedocs configs.
+**Repository Link**: [OmniParse on GitHub](https://github.com/The-Swarm-Corporation/OmniParse)
 
 
 
