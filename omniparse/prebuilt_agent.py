@@ -1,5 +1,5 @@
 import os
-from typing import Dict
+from typing import List
 from pydantic import BaseModel, Field
 from swarms import OpenAIFunctionCaller
 from dotenv import load_dotenv
@@ -34,9 +34,8 @@ You are Omni Parse, an expert information extraction agent specialized in conver
 
 class StructuredData(BaseModel):
     summary: str = Field(description="The summary of the document")
-    # data: List[Dict[str, str]] = Field(description="The structured data extracted from the document")
-    information: Dict[str, str] = Field(
-        description="The information extracted from the document"
+    data: List[str] = Field(
+        description="Valuable information extracted from the document"
     )
 
 

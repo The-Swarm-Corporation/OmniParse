@@ -76,10 +76,6 @@ We welcome contributions from the open-source community! Please read our [contri
 
 OmniParse is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
----
-
-**Repository Link**: [OmniParse on GitHub](https://github.com/The-Swarm-Corporation/OmniParse)
-
 
 
 # License
