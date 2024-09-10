@@ -42,19 +42,20 @@ pip install -r requirements.txt
 Here’s a simple example to get started with **OmniParse**:
 
 ```python
-from omniparse import OmniParser
+from omniparse.main import OmniParse
+from omniparse.prebuilt_agent import model
 
-# Initialize the parser
-parser = OmniParser()
+parser = OmniParse(
+    model=model,
+    document_name="doc.pdf",
+    db_n_results=3,
+    limit_tokens=1000,
+    collection_name="omniparse_db",
+)
 
-# Load your unstructured document (PDF, image, etc.)
-document = 'path/to/your/document.pdf'
+context = parser.run("What is the total amount due?")
+print(context)
 
-# Extract structured data
-structured_data = parser.extract(document)
-
-# Output the structured data
-print(structured_data)
 ```
 
 ## Documentation

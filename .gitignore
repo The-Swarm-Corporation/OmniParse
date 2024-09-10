@@ -7,11 +7,14 @@ __pycache__/
 *.so
 .vscode/
 .vscode
-
+agent_workspace/
 # Distribution / packaging
 .Python
 build/
 develop-eggs/
+chroma_db/
+chroma/
+errors/
 dist/
 downloads/
 eggs/

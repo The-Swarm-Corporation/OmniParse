@@ -1,3 +1,6 @@
-torch
-zetascale
+python
 swarms
+swarms-memory
+openpyxl
+loguru
+PyPDF2
